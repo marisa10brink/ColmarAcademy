@@ -12,6 +12,7 @@
   -Typography
   -Structure
   -Section Specific Styling
+    -Repeating Components (Shares classes with more than one section)
     -Header and Navigation
     -Intro
     -Info
@@ -30,6 +31,18 @@
 /* -----------------------------------------
             Global Styling
 ----------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.2rem;
+}
+
+.mobile {
+  display: none;
+}
 
 /* -----------------------------------------
             Typography
@@ -43,10 +56,93 @@
             Section Specific Styling
 ----------------------------------------- */
 
+/*----------  Repeating Components -------*/
+
+/*This section deals with parts that are repeated through the site. Mainly flex containers, dimensions, margins, and paddings*/
+
+section{
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+} /* courses section set up in courses section styling */
+
+.featured {
+  width: 60%;
+  padding: .5rem 1.5rem .5rem 0;
+}
+
+.featured img {
+  width: 100%;
+  height: auto;
+}
+
+.intro, .info, .thesis {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.thesis h2, .courses h2 {
+  width: 100%;
+}
+.list-container, .teaser-container {
+  width: 40%;
+  flex-flow: column nowrap;
+  align-items:center;
+  flex-grow: 1;
+}
+
+.list-container {
+  justify-content: center;
+}
+
+.teaser-container {
+  justify-content: flex-start;
+}
+
+.teaser {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.thumbnail.desktop {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+}
+
 /*----------  Header & Navigation --------*/
 /*----------  Intro Section --------------*/
 /*----------  Info Section ---------------*/
 /*----------  Courses Section ------------*/
+section.courses {
+  display: block;
+  width: 100%;
+}
+.card-container {
+  margin: .5rem auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex: 1 1 30%;
+    border: 1px solid red;
+}
+
+.course-card {
+  max-width: 30%;
+  min-height: 20rem;
+  border: 1px solid red;
+}
+
+.course-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
 /*----------  Thesis Section -------------*/
 /*----------  Footer ---------------------*/
 
