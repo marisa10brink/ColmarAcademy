@@ -1,3 +1,55 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* -----------------------------------------
+            General Info
+----------------------------------------- */
+
+/*----------  CSS File Structure ---------*/
+
+/* List of Sections in Order
+  -Global Styling
+  -Typography
+  -Structure
+  -Section Specific Styling
+    -Header and Navigation
+    -Intro
+    -Info
+    -Courses
+    -Thesis
+    -Footer
+  -Media Queries (All media queries are located at the end of the document)
+
+/*----------  Typefaces  -----------------*/
+
+/*----------  Color Palette --------------*/
+
+
+
+
+/* -----------------------------------------
+            Global Styling
+----------------------------------------- */
+
+/* -----------------------------------------
+            Typography
+----------------------------------------- */
+
+/* -----------------------------------------
+            Structure
+----------------------------------------- */
+
+/* -----------------------------------------
+            Section Specific Styling
+----------------------------------------- */
+
+/*----------  Header & Navigation --------*/
+/*----------  Intro Section --------------*/
+/*----------  Info Section ---------------*/
+/*----------  Courses Section ------------*/
+/*----------  Thesis Section -------------*/
+/*----------  Footer ---------------------*/
+
+/* -----------------------------------------
+            Media Queries
+----------------------------------------- */
