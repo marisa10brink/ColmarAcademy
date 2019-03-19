@@ -10,7 +10,6 @@
 /* List of Sections in Order
   -Global Styling
   -Typography
-  -Structure
   -Section Specific Styling
     -Repeating Components (Shares classes with more than one section)
     -Header and Navigation
@@ -22,6 +21,12 @@
   -Media Queries (All media queries are located at the end of the document)
 
 /*----------  Typefaces  -----------------*/
+
+/*font-family: 'Merriweather', serif;
+font-family: 'Lato', sans-serif;
+
+Merriweather: 400, 400 italic, 700
+Lato: 400, 900*/
 
 /*----------  Color Palette --------------*/
 
@@ -38,6 +43,8 @@
 html {
   font-size: 16px;
   line-height: 1.2rem;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
 }
 
 .mobile {
@@ -48,9 +55,26 @@ html {
             Typography
 ----------------------------------------- */
 
-/* -----------------------------------------
-            Structure
------------------------------------------ */
+h1{
+  font-family: Merriweather, serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: Merriweather, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h5{
+  font-size: 1 rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+}
 
 /* -----------------------------------------
             Section Specific Styling
@@ -58,7 +82,8 @@ html {
 
 /*----------  Repeating Components -------*/
 
-/*This section deals with parts that are repeated through the site. Mainly flex containers, dimensions, margins, and paddings*/
+/*This section deals with parts that are repeated through the site.
+Mainly flex containers, dimensions, margins, and paddings*/
 
 section{
   width: 100%;
@@ -103,7 +128,7 @@ section{
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
 }
@@ -115,12 +140,31 @@ section{
 }
 
 /*----------  Header & Navigation --------*/
+header {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 2px 0 black;
+}
+
+.logo-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
 /*----------  Intro Section --------------*/
 /*----------  Info Section ---------------*/
 /*----------  Courses Section ------------*/
 section.courses {
   display: block;
   width: 100%;
+  background-image: url("../images/diamond_upholstery.png");
 }
 .card-container {
   margin: .5rem auto;
@@ -135,13 +179,22 @@ section.courses {
 .course-card {
   max-width: 30%;
   min-height: 20rem;
+  margin: 1rem;
   border: 1px solid red;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.course-card h5, .course-card p, .course-card h3 {
+  padding: .5rem 1rem 1.5rem 1rem;
 }
 
 .course-thumbnail {
   width: 100%;
   height: auto;
+  margin-bottom: 1rem; 
 }
+
 
 /*----------  Thesis Section -------------*/
 /*----------  Footer ---------------------*/
