@@ -30,8 +30,20 @@ Lato: 400, 900*/
 
 /*----------  Color Palette --------------*/
 
+/* Dark Navy: rgb(3, 20, 65)
+  Light cool gray: rgb (236, 237, 240)
+  Cool gray: rgb(194, 202, 223)
 
+  Muted Teal: 45, 131, 136  
+  Bright Teal: 64, 183, 190  
 
+  Muted Red: 195, 65, 36  
+  Bright Red: 226, 68, 32  
+
+  Gold: 233, 196, 71  
+  Bright Gold: 255, 216, 84 
+  Very Light Gold: 253, 252, 249  
+*/
 
 /* -----------------------------------------
             Global Styling
@@ -42,9 +54,13 @@ Lato: 400, 900*/
 
 html {
   font-size: 16px;
-  line-height: 1.2rem;
   font-family: Lato, sans-serif;
   font-weight: 400;
+  color: rgb(3, 20, 65);
+}
+
+body {
+  line-height: 1.5rem;
 }
 
 .mobile {
@@ -63,9 +79,16 @@ h1{
 
 h2 {
   font-family: Merriweather, serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   text-align: center;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: Merriweather, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-transform: capitalize;
 }
 
@@ -86,17 +109,23 @@ h5{
 Mainly flex containers, dimensions, margins, and paddings*/
 
 section{
+  background-color: rgb(251, 250, 242);
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   display: flex;
 } /* courses section set up in courses section styling */
 
 .featured {
   width: 60%;
+  height: auto;
   padding: .5rem 1.5rem .5rem 0;
 }
 
 .featured img {
+  width: 100%;
+  height: auto;
+}
+.featured video {
   width: 100%;
   height: auto;
 }
@@ -142,14 +171,16 @@ section{
 /*----------  Header & Navigation --------*/
 header {
   width: 100%;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  height: 4rem;
+  padding: 0 2rem;
+  background-color: rgba(3, 20, 65, 0.8);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  box-shadow: 0px 2px 2px 0 black;
+  position: fixed;
+  border-bottom: 1px solid rgb(233, 196, 71); 
 }
 
 .logo-container {
@@ -157,8 +188,34 @@ header {
   align-content: center;
   align-items: center;
 }
+.logo-container img {
+  height: 3rem;
+  width: auto;
+}
+.logotype {
+  font-size: 2rem;
+  font-family: Merriweather;
+  font-weight:700;
+  text-transform: uppercase;
+  color: rgb(233, 196, 71);
+}
+
+.academy{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: rgb(253, 252, 249);
+}
+
+nav.desktop {}
+
 
 /*----------  Intro Section --------------*/
+
+.intro {
+  background-image: url("../images/diamond_upholstery_light.png");
+  padding-top: 6rem;
+}
+
 /*----------  Info Section ---------------*/
 /*----------  Courses Section ------------*/
 section.courses {
@@ -166,38 +223,62 @@ section.courses {
   width: 100%;
   background-image: url("../images/diamond_upholstery.png");
 }
+
+section.courses h2{
+  color: rgb(233, 196, 71);
+}
+
 .card-container {
-  margin: .5rem auto;
+  margin: 2rem auto .5rem auto;
   padding: 0 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   flex: 1 1 30%;
-    border: 1px solid red;
 }
 
 .course-card {
   max-width: 30%;
-  min-height: 20rem;
-  margin: 1rem;
-  border: 1px solid red;
-  background-color: white;
+  min-height: 24rem;
+  margin: 1rem 1rem 2rem 1rem;
+  background-color: rgba(253,252,249,1);
   border-radius: 5px;
 }
 
 .course-card h5, .course-card p, .course-card h3 {
-  padding: .5rem 1rem 1.5rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.course-card h3 {
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.course-card h5 {
+  background: linear-gradient(0deg, rgba(253,252,249,1) 0%, rgba(237,237,240,1) 100%);
+  border-top: 1px solid rgb(233, 196, 71); 
+  padding-bottom: .5rem;
+  padding-top: .5rem;
 }
 
 .course-thumbnail {
   width: 100%;
   height: auto;
   margin-bottom: 1rem; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 
 /*----------  Thesis Section -------------*/
 /*----------  Footer ---------------------*/
+footer {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem 1.5rem;
+  background-image: url("../images/diamond_upholstery.png");
+}
 
 /* -----------------------------------------
             Media Queries
