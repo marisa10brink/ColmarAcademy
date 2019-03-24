@@ -97,7 +97,7 @@ h3 {
 }
 
 h5{
-  font-size: 1 rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.05rem;
@@ -130,12 +130,13 @@ section{
   height: auto;
   border-radius: 5px;
 }
-.featured video {
-  width: 100%;
-  height: auto;
+
+.intro {
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
-.intro, .info, .thesis {
+.info, .thesis {
   flex-flow: row wrap;
   justify-content: space-between;
 }
@@ -151,12 +152,16 @@ section{
 }
 
 .list-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  max-width: 30%;
 }
 
 .teaser-container {
   justify-content: flex-start;
-  border: 1px solid red;
+  margin-top: -.5rem;
 }
 
 .teaser {
@@ -168,6 +173,18 @@ section{
   padding: 1rem;
 }
 
+div.teaser:hover {
+  background: linear-gradient(0deg, rgba(253,252,249,1) 0%, rgba(237,237,240,1) 100%);
+}
+
+.teaser img {
+  margin-right: 1rem;
+}
+
+.teaser-info h3, .teaser-info p {
+  margin-bottom: .5rem;
+}
+
 .thumbnail.desktop {
   display: inline-block;
   width: 35%;
@@ -175,11 +192,28 @@ section{
   border-radius: 5px;
 }
 
+.teaser-info a:link{
+  color: rgb(45, 131, 136);
+}
+
+.teaser-info a:visited{
+   color: rgb(3, 20, 65);
+}
+
+.teaser-info a:hover{
+   color: rgb(64, 183, 190);
+}
+
+.teaser-info a:active{
+  color: rgb(226, 68, 32);
+}
+
+
 /*----------  Header & Navigation --------*/
 header {
   width: 100%;
   height: 4rem;
-  padding: 0 0 0 2rem;
+  padding: 01.5rem 2rem;
   background-color: rgba(3, 20, 65, 0.8);
   display: flex;
   flex-flow: row nowrap;
@@ -201,7 +235,7 @@ header {
 }
 .logotype {
   font-size: 2rem;
-  font-family: Merriweather;
+  font-family: Merriweather, serif;
   font-weight:700;
   text-transform: uppercase;
   color: rgb(233, 196, 71);
@@ -235,10 +269,6 @@ nav a {
   letter-spacing: .1rem;
 }
 
-nav a:last-of-type {
-  padding-right: 2rem;
-}
-
 nav a:nth-child(odd) {
   border-bottom: 3px solid rgb(45, 131, 136);
 }
@@ -246,6 +276,7 @@ nav a:nth-child(odd) {
 nav a:nth-child(odd):hover {
   border-bottom: 3px solid rgb(64, 183, 190);
   color: rgb(255, 216, 84);
+  transition: all 400ms ease;
 }
 
 nav a:nth-child(even) {
@@ -255,7 +286,44 @@ nav a:nth-child(even) {
 nav a:nth-child(even):hover {
   border-bottom: 3px solid rgb(226, 68, 32);
   color: rgb(255, 216, 84);
+  transition: all 400ms ease;
 }
+
+/*----------  Intro Section --------------*/
+
+.intro h1, .intro h5 {
+  margin-bottom: 2rem;
+}
+
+.intro {
+  background-image: url("../images/diamond_upholstery_light.png");
+  padding-top: 6rem;
+}
+
+.button {
+  width: 100%;
+  background-color: rgb(3, 20, 65);
+  color: rgb(233, 196, 71);
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  border-radius: 5px;
+  padding: .5rem;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgb(45, 131, 136);
+  color: rgb(255, 216, 84);
+  transition: all 700ms ease;
+}
+
+.button:active {
+  background-color: rgb(64, 183, 190);
+  color: rgb(253, 252, 249);
+}
+
 /* Dark Navy: rgb(3, 20, 65)
   Light cool gray: rgb (236, 237, 240)
   Cool gray: rgb(194, 202, 223)
@@ -270,13 +338,6 @@ nav a:nth-child(even):hover {
   Bright Gold: 255, 216, 84 
   Very Light Gold: 253, 252, 249  
 */
-
-/*----------  Intro Section --------------*/
-
-.intro {
-  background-image: url("../images/diamond_upholstery_light.png");
-  padding-top: 6rem;
-}
 
 /*----------  Info Section ---------------*/
 /*----------  Courses Section ------------*/
@@ -334,6 +395,14 @@ section.courses h2{
 
 
 /*----------  Thesis Section -------------*/
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
 /*----------  Footer ---------------------*/
 footer {
   width: 100%;
