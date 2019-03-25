@@ -72,8 +72,9 @@ a:link {
 }
 
 /* -----------------------------------------
-            Typography
+            General Typography
 ----------------------------------------- */
+/*More specific styling can also be found in specific sections*/
 
 h1{
   font-family: Merriweather, serif;
@@ -461,6 +462,7 @@ footer {
             Media Queries
 ----------------------------------------- */
 
+/* Makes featured images smaller and gives teaser containers more room. Also gives course cards a larger width, which forces two columns in course container*/
 @media only screen and (max-width: 1120px) {
   .course-card {
     max-width: 45%;
@@ -479,6 +481,7 @@ footer {
   } 
 }
 
+/*Adjusts larger fonts sizes. Logo text shrinks to accomodate navigation.*/
 @media only screen and (max-width: 900px) {
   h1{
     font-size: 2rem;
@@ -500,6 +503,7 @@ footer {
   }
 }
 
+/*Switches to one column layout. Some images switch to mobile versions or stop displaying if no mobile version is available.*/
 @media only screen and (max-width: 800px){
   
   .info, .intro, .thesis {
@@ -561,6 +565,7 @@ footer {
   }
 }
 
+/* Mobile navigation (icons) becomes visible, but logo type remains. */
 @media only screen and (max-width: 740px) {
   nav.desktop, nav.desktop a {
     display: none;
@@ -595,6 +600,7 @@ footer {
   }
 }
 
+/* Transitioning to phone sizes: most padding and margins remain. Logo type disappears and leaves only mobile navigation and logo image. Teaser images move from side to top of information. Course descriptions disappear and teasers in thesis section disappear.*/
 @media only screen and (max-width: 540px){
   
   header {
@@ -705,6 +711,7 @@ footer {
   }
 }
 
+/*Fully mobile version matching mobile design specs. Teasers in thesis section are gone. Images and video in featured sections either disappear or have become full-width.*/
 @media only screen and (max-width: 460px){
   
    .info .featured, .legal, .thesis h3, .thesis p {
