@@ -78,13 +78,16 @@ a:link {
 h1{
   font-family: Merriweather, serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: capitalize;
 }
 
 h2 {
   font-family: Merriweather, serif;
   font-size: 3rem;
   font-weight: 400;
+  line-height: 3rem;
   text-align: center;
   text-transform: capitalize;
 }
@@ -103,6 +106,10 @@ h5{
   letter-spacing: 0.05rem;
 }
 
+p{
+  margin-bottom: .5rem;
+}
+
 /* -----------------------------------------
             Section Specific Styling
 ----------------------------------------- */
@@ -118,6 +125,7 @@ section{
   padding: 2rem 1.5rem;
   display: flex;
 } /* courses section set up in courses section styling */
+
 
 .featured {
   width: 60%;
@@ -194,6 +202,7 @@ div.teaser:hover {
 
 .teaser-info a:link{
   color: rgb(45, 131, 136);
+  font-weight: 700;
 }
 
 .teaser-info a:visited{
@@ -324,22 +333,27 @@ nav a:nth-child(even):hover {
   color: rgb(253, 252, 249);
 }
 
-/* Dark Navy: rgb(3, 20, 65)
-  Light cool gray: rgb (236, 237, 240)
-  Cool gray: rgb(194, 202, 223)
-
-  Muted Teal: 45, 131, 136  
-  Bright Teal: 64, 183, 190  
-
-  Muted Red: 195, 65, 36  
-  Bright Red: 226, 68, 32  
-
-  Gold: 233, 196, 71  
-  Bright Gold: 255, 216, 84 
-  Very Light Gold: 253, 252, 249  
-*/
-
 /*----------  Info Section ---------------*/
+
+.info h2{
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  border-bottom: 3px solid rgb(233, 196, 71);
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+.author {
+  font-style: italic;
+}
+
+p.quote::first-letter {
+  font-size: 2rem;
+  float: left;
+}
+
 /*----------  Courses Section ------------*/
 section.courses {
   display: block;
@@ -402,6 +416,14 @@ video {
   border-radius: 5px;
 }
 
+.thesis h2 {
+  margin-bottom: 2rem;
+}
+
+.featured h3 {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
 
 /*----------  Footer ---------------------*/
 footer {
@@ -425,9 +447,169 @@ footer {
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: .02rem;
+  padding-left: .5rem;
+}
+
+.legal a:hover {
+  color: rgb(233, 196, 71);
+  transition: color 400ms ease;
 }
 
 
 /* -----------------------------------------
             Media Queries
 ----------------------------------------- */
+
+@media only screen and (max-width: 1110px) {
+  .course-card {
+    max-width: 45%;
+  }
+  
+  .featured {
+    max-width: 50%;
+    padding-right: 0;
+  }
+  
+ 
+  .teaser-container, .list-container {
+    max-width: 50%;
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
+  h1{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  
+.teaser-info  h3 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  
+  .logotype{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  
+  .info, .intro, .thesis {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  
+  .featured, .teaser-container, .list-container {
+    min-width: 100%;
+  }
+  
+  .thumbnail.desktop {
+    display: none;
+  }
+  .thumbnail.mobile {
+    display: inline-block;
+    max-height: 8rem;
+    height: auto;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
+  .course-card{
+    min-width: 100%;
+    min-height: 5rem;
+    padding-bottom: 1rem;
+    margin: 1rem auto;
+  }
+  .course-thumbnail {
+    display: none;
+  }
+  
+  .course-card h3 {
+    padding-top: 1rem;
+  }
+  
+  .thesis .teaser {
+    padding-left:0;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  nav.desktop, nav.desktop a {
+    display: none;
+  }
+  
+  nav.mobile {
+    height: 67px;
+    position: relative;
+    z-index: 15;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav.mobile a, nav.mobile a img {
+    display: inline-block;
+  }
+  
+  nav.mobile a{
+    min-width: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  nav.mobile img {
+    height: 2rem;
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 540px){
+  
+  
+  .logotype {
+    display:none;
+  }
+  .teaser {
+    flex-direction: column;
+  }
+  
+  .thumbnail.mobile {
+    min-width: 100%;
+    min-height: auto;
+  }
+  
+  .course-card {
+    padding: 0;
+    min-height: 3rem;
+  }
+  .course-card h3 {
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin:0;
+  }
+  .course-card h5, .course-card p {
+    display:none;
+  }
+  
+  .thesis .teaser {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px){
+  .info .featured {
+    display:none;
+  }
+}
